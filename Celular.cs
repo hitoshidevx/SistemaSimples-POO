@@ -1,21 +1,27 @@
 namespace SistemaSimplesPOO_Celular
 {
-    public class Celular
+    public class celular
     {
-        public string cor;
-        public string modelo;
-        public float tamanho;
-        public string ligacao;
-        public string mensagem;
-        public bool estado;
-
-        public bool EstadoCelular(string condicao){
-            if(condicao == "sim"){
-                estado = true;
-            }else{
-                estado = false;
+        public string color;
+        public string model;
+        public float size;
+        public bool on;
+        
+        public bool On(string condicao){
+            switch(condicao){
+                case "sim":
+                    on = true;
+                break;
+                case "nao":
+                    on = false;
+                break;
+                default:
+                break;
             }
-            return estado;
+            return on;
         }
-        }
-        }
+
+
+        
+    }
+}
